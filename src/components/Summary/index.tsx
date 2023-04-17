@@ -1,5 +1,9 @@
 import { SummaryContainer } from "./styles";
-import { ArrowCircleUp } from "phosphor-react";
+import {
+  ArrowCircleUp,
+  ArrowCircleDown,
+  CurrencyCircleDollar,
+} from "phosphor-react";
 export function Summary() {
   return (
     <SummaryContainer>
@@ -7,6 +11,18 @@ export function Summary() {
         <header>
           <span>Entradas</span>
           <ArrowCircleUp />
+        </header>
+      </div>
+      <div>
+        <header>
+          <span>Saidas</span>
+          <ArrowCircleDown />
+        </header>
+      </div>
+      <div>
+        <header>
+          <span>Total</span>
+          <CurrencyCircleDollar />
         </header>
       </div>
     </SummaryContainer>
