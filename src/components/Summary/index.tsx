@@ -1,4 +1,4 @@
-import { SummaryContainer } from "./styles";
+import { SummaryCard, SummaryContainer } from "./styles";
 import {
   ArrowCircleUp,
   ArrowCircleDown,
@@ -7,24 +7,27 @@ import {
 export function Summary() {
   return (
     <SummaryContainer>
-      <div>
+      <SummaryCard>
         <header>
           <span>Entradas</span>
-          <ArrowCircleUp />
+          <ArrowCircleUp size={32} color="#00b37e" />
         </header>
-      </div>
-      <div>
+        <strong>R$ 17.400,00</strong>
+      </SummaryCard>
+      <SummaryCard>
         <header>
           <span>Saidas</span>
-          <ArrowCircleDown />
+          <ArrowCircleDown size={32} color="#f75a68" />
         </header>
-      </div>
-      <div>
+        <strong>R$ 17.400,00</strong>
+      </SummaryCard>
+      <SummaryCard variant={"green"}>
         <header>
           <span>Total</span>
-          <CurrencyCircleDollar />
+          <CurrencyCircleDollar size={32} color="#00b37e" />
         </header>
-      </div>
+        <strong>R$ 17.400,00</strong>
+      </SummaryCard>
     </SummaryContainer>
   );
 }
