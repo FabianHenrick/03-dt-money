@@ -1,12 +1,13 @@
 import { Header } from "../../components/Header";
 import { Summary } from "../../components/Summary";
+import { TransactionsContext } from "../../contexts/TransactionsContext";
 import { SearchFomr } from "./components/SearchForm";
 import {
   PriceHighLight,
   TransactionsContainer,
   TransactionsTable,
 } from "./styles";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 interface Transaction {
   id: number;
@@ -18,18 +19,7 @@ interface Transaction {
 }
 
 export function Transactions() {
-  const [transactions, setTransactions] = useState<Transaction[]>([]);
-
-  async function loadTransactions() {
-    const response = await fetch("http://localhost:3333/transactions");
-    const data = await response.json();
-
-    setTransactions(data);
-  }
-
-  useEffect(() => {
-    loadTransactions();
-  });
+  const { transactions } = useContext(TransactionsContext);
 
   return (
     <div>
@@ -39,7 +29,7 @@ export function Transactions() {
         <SearchFomr />
         <TransactionsTable>
           <tbody>
-            {transactions.map((transactions) => {
+            {transactions.map((transactions: any) => {
               return (
                 <tr key={transactions.id}>
                   <td>{transactions.description}</td>
