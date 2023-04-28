@@ -5,8 +5,8 @@
       "description": "Desenvolvimento de Site",
       "type": "income",
       "category": "Venda",
-      "price": 140000,
-      "createdAt": "2023-04-26T01:40:21.316Z"
+      "price": 14000,
+      "createdAt": "2023-04-23T09:40:21.316Z"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "type": "outcome",
       "category": "Alimentação",
       "price": 38,
-      "createdAt": "2023-04-26T01:20:21.316Z"
+      "createdAt": "2023-04-26T04:20:21.316Z"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "type": "outcome",
       "category": "Estudos",
       "price": 1100,
-      "createdAt": "2023-04-28T01:20:21.316Z"
+      "createdAt": "2023-04-28T12:20:21.316Z"
     }
   ]
 }
