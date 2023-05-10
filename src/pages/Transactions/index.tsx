@@ -30,7 +30,7 @@ export function Transactions() {
         <SearchFomr />
         <TransactionsTable>
           <tbody>
-            {transactions.map((transactions: any) => {
+            {transactions.map((transactions) => {
               return (
                 <tr key={transactions.id}>
                   <td>{transactions.description}</td>
